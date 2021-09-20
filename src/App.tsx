@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-function App() {
+import { rootReducer } from './modules/app';
+
+import { Categories } from './components';
+import { Quiz } from './components';
+
+import { Container, TopBar } from './App.styles';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <TopBar>Quiz Mania</TopBar>
+      <Container>
+        <Router>
+          <Route exact path="/">
+            <Categories />
+          </Route>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+        </Router>
+      </Container>
+    </Provider>
   );
-}
+};
 
 export default App;

@@ -1,3 +1,7 @@
+# Quiz Mania
+
+This project allows You to check Your knowlegde about various of subjects. Pick Category and difficult level first, then answer questions and check Your results.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -28,6 +32,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn prettier`
+
+Allows you to format all files with settings described in `prettier.config.js`
 
 ### `yarn eject`
 

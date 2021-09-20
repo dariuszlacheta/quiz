@@ -1,0 +1,7 @@
+export const GET_CATEGORIES = 'GET_CATEGORIES';
+export const SET_CATEGORY = 'SET_CATEGORY';
+export const GET_QUESTIONS = 'GET_QUESTIONS';
+export const CLEAR_QUESTIONS = 'CLEAR_QUESTIONS';
+export const SET_DIFFICULT = 'SET_DIFFICULT';
+export const SET_ERROR = 'SET_ERROR';
+export const CHANGE_RESULT = 'CHANGE_RESULT';
